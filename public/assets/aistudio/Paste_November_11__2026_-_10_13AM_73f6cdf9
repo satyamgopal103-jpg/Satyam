@@ -1,0 +1,1513 @@
+# CIVIC PULSE — ULTIMATE NATIVE ANDROID APPLICATION MASTER DEVELOPMENT PROMPT
+
+## PROJECT IDENTITY
+
+You are acting as an expert Android application architect, senior Kotlin developer, Jetpack Compose specialist, UI/UX designer, motion designer, backend engineer, database architect, security engineer, and quality assurance engineer.
+
+Your task is to DESIGN, BUILD, IMPLEMENT, TEST, AND DOCUMENT a complete native Android application called CIVIC PULSE.
+
+This is a real application development project.
+
+Do not create only a prototype, screenshot, website, static interface, or non-functional visual mockup.
+
+Create a complete Android project with organized source files, reusable components, functional navigation, application logic, backend integration architecture, database models, animations, and testing infrastructure.
+
+The final product should be suitable for opening, building, testing, and maintaining in Android Studio.
+
+The application must look premium, modern, futuristic, professional, and trustworthy.
+
+PROJECT NAME: CIVIC PULSE
+
+TAGLINE: Your Community. Your Voice. Your Future.
+
+CAMPAIGN MESSAGE: Together for a Better Tomorrow.
+
+PRIMARY OBJECTIVE:
+
+Create an all-in-one civic engagement and community networking Android application that connects residents, neighbourhoods, public representatives, government departments, community organizations, and volunteers.
+
+The application should help residents participate in their communities, report civic issues, follow public infrastructure projects, access government information, discover initiatives, communicate, participate in polls, and contribute to community development.
+
+--------------------------------------------------
+
+# PART 1 — ANDROID TECHNICAL ARCHITECTURE
+
+Build a native Android application.
+
+Do not build a website and wrap it in a WebView.
+
+Do not use HTML as the primary application interface.
+
+Use the following technology stack:
+
+### Android development
+
+- Kotlin.
+- Jetpack Compose.
+- Material 3.
+- Android Navigation Compose.
+- Kotlin Coroutines.
+- Kotlin Flow.
+- ViewModel.
+- Lifecycle-aware state collection.
+- Room database for suitable local persistence.
+- DataStore for application preferences.
+- WorkManager for background tasks.
+- Android notification APIs.
+- Android permission APIs.
+
+### UI and animations
+
+- Compose Animation.
+- AnimatedVisibility.
+- AnimatedContent.
+- Crossfade.
+- updateTransition.
+- InfiniteTransition.
+- Canvas for custom visual effects.
+- Material 3 components.
+- Custom Compose drawing where appropriate.
+
+### Networking
+
+- Retrofit.
+- OkHttp.
+- Kotlin Serialization.
+- Repository pattern.
+- Structured error handling.
+
+### Backend
+
+Use a separate backend service:
+
+- Node.js.
+- TypeScript.
+- Express.
+- PostgreSQL.
+- Prisma ORM.
+- Secure authentication.
+- Role-based authorization.
+- REST APIs.
+
+### AI integration
+
+Use Google Gemini through secure backend endpoints.
+
+Never expose private API keys inside Android application source code.
+
+### Mapping
+
+Use Google Maps SDK for Android when configured.
+
+Provide a clearly labelled fallback if credentials are missing.
+
+### Architecture
+
+Use a maintainable layered architecture:
+
+1. Presentation layer.
+2. Domain layer.
+3. Data layer.
+4. Network layer.
+5. Database layer.
+6. Dependency injection layer.
+
+Use a consistent architecture such as MVVM with repositories and dependency injection.
+
+Use Hilt if compatible with the generated Android project.
+
+Do not combine conflicting dependency versions.
+
+Use stable, compatible dependency versions and verify the Gradle build.
+
+--------------------------------------------------
+
+# PART 2 — DESIGN SYSTEM AND BRANDING
+
+Create an original Civic Pulse visual identity.
+
+The default theme should be:
+
+- Deep navy background.
+- Royal blue primary colour.
+- Cyan highlights.
+- Teal accent.
+- White foreground text.
+- Muted blue-grey secondary text.
+
+Design language:
+
+- Premium.
+- Futuristic.
+- Clean.
+- Modern.
+- Trustworthy.
+- Mobile-first.
+- Accessible.
+- Smooth.
+- Visually consistent.
+
+Use carefully designed rounded cards, restrained glass effects, elegant typography, subtle gradients, and consistent iconography.
+
+Create a reusable design system with:
+
+- Colour tokens.
+- Typography tokens.
+- Spacing tokens.
+- Shape tokens.
+- Elevation tokens.
+- Animation specifications.
+- Button styles.
+- Text field styles.
+- Card styles.
+- Dialog styles.
+
+Create a reusable CivicPulseLogo composable.
+
+The logo should communicate community, connection, and civic participation.
+
+Do not copy existing company or government logos.
+
+--------------------------------------------------
+
+# PART 3 — PREMIUM ANIMATED CITY BACKGROUND
+
+This is one of the most important visual requirements.
+
+Create a reusable AnimatedCityBackground composable.
+
+It should provide an immersive city environment.
+
+Visual components:
+
+- Modern illuminated skyline.
+- Layered buildings.
+- Glowing windows.
+- Deep blue gradient sky.
+- Soft cyan horizon.
+- Gentle light particles.
+- Floating translucent bubbles.
+- Background glow.
+- Subtle parallax movement.
+
+Create the skyline using original vector graphics, Compose Canvas, or bundled SVG/vector assets converted into Android-compatible resources.
+
+The city background must remain visually consistent across:
+
+1. Splash screen.
+2. Login screen.
+3. Registration screen.
+4. Forgot password screen.
+5. Notification permission screen.
+6. Dashboard loading screen.
+
+Do not depend on a third-party video link for the essential background.
+
+The application must work even without an internet connection.
+
+If an optional background video is implemented, provide a static or animated vector fallback.
+
+--------------------------------------------------
+
+# PART 4 — FLOATING BUBBLE ANIMATION ENGINE
+
+Create a reusable FloatingParticles composable.
+
+Requirements:
+
+- Multiple translucent circles.
+- Different particle sizes.
+- Soft blur effects.
+- Slow vertical movement.
+- Slight horizontal drift.
+- Subtle scaling.
+- Different animation durations.
+- Gentle light pulses.
+- No harsh flashing.
+- No distracting movement.
+
+Use Compose animation APIs efficiently.
+
+Particles must remain behind the foreground interface.
+
+They must not intercept taps or gestures.
+
+Limit particle count according to device capability.
+
+Respect Android accessibility and reduced-animation preferences where possible.
+
+Avoid unnecessary recomposition.
+
+--------------------------------------------------
+
+# PART 5 — SPLASH SCREEN
+
+Create a premium animated opening screen.
+
+Initial background:
+
+A full-screen deep navy and blue gradient.
+
+Display the animated city skyline.
+
+Animation sequence:
+
+1. Background fades in.
+2. City illustration appears.
+3. Floating bubbles begin moving.
+4. Civic Pulse logo scales into view.
+5. Soft glow appears around the logo.
+6. CIVIC PULSE text fades in.
+7. Tagline appears.
+8. Campaign message appears.
+9. A subtle progress indicator appears.
+
+Display:
+
+CIVIC PULSE
+
+Your Community. Your Voice. Your Future.
+
+Together for a Better Tomorrow.
+
+Supporting message:
+
+"Every voice matters. Every community counts."
+
+Create a smooth transition to the appropriate authentication or home screen.
+
+The splash screen must not display indefinitely.
+
+Use a proper Android splash implementation for application startup and then transition to the custom animated splash experience.
+
+--------------------------------------------------
+
+# PART 6 — LOGIN SCREEN
+
+Create a separate native login screen.
+
+Background:
+
+The same AnimatedCityBackground.
+
+Header:
+
+- Civic Pulse logo.
+- Welcome Back!
+- "Sign in to stay connected with your community."
+
+Login fields:
+
+- Email address.
+- Password.
+- Show/hide password.
+- Remember me where supported by the authentication design.
+- Forgot password.
+
+Primary button:
+
+SIGN IN.
+
+Below:
+
+OR CONTINUE WITH
+
+- Google sign-in.
+- Apple sign-in only if a suitable supported identity flow is implemented.
+
+Below the form:
+
+"New to Civic Pulse? Create an account."
+
+Use premium glass-style cards.
+
+Animations:
+
+- Card fade and slide.
+- Logo reveal.
+- Staggered input entrance.
+- Input focus glow.
+- Button press feedback.
+- Loading indicator.
+- Success transition.
+- Error feedback.
+
+Use proper keyboard types and password input configuration.
+
+Prevent repeated form submission.
+
+Validate all inputs.
+
+--------------------------------------------------
+
+# PART 7 — SIGN-UP SCREEN
+
+Create a separate registration screen.
+
+Heading:
+
+JOIN CIVIC PULSE
+
+Subheading:
+
+"Be part of the change. Connect with your community."
+
+Fields:
+
+- Full name.
+- Email address.
+- Mobile number.
+- Password.
+- Confirm password.
+
+Additional controls:
+
+- Password visibility.
+- Password strength guidance.
+- Terms acceptance.
+- Privacy Policy acceptance.
+
+Validation:
+
+- Required fields.
+- Valid email.
+- Valid mobile number.
+- Minimum password requirements.
+- Password confirmation.
+- Terms acceptance.
+
+Use animated field entrances and a smooth navigation transition.
+
+Do not combine login and sign-up into one crowded screen.
+
+--------------------------------------------------
+
+# PART 8 — FORGOT PASSWORD
+
+Create a separate recovery screen.
+
+Heading:
+
+Forgot your password?
+
+Description:
+
+"Enter your registered email address to begin account recovery."
+
+Include:
+
+- Email input.
+- Reset request button.
+- Success state.
+- Error state.
+- Return-to-login action.
+
+Integrate a real reset process through the backend.
+
+Do not claim that a reset email has been sent without a confirmed backend response.
+
+--------------------------------------------------
+
+# PART 9 — AUTHENTICATION AND USER SESSIONS
+
+Implement a real authentication architecture.
+
+Support:
+
+- Email and password.
+- Google sign-in.
+- Phone OTP if configured.
+- Email verification.
+- Password recovery.
+- Session renewal.
+- Logout.
+- Protected application routes.
+
+Use secure token storage appropriate to Android.
+
+Never store plaintext passwords.
+
+Do not hardcode credentials.
+
+Do not claim OAuth is working without provider configuration.
+
+Provide an explicitly labelled development authentication mode.
+
+--------------------------------------------------
+
+# PART 10 — NOTIFICATION PERMISSION SCREEN
+
+After authentication, show a dedicated onboarding screen.
+
+Use the same animated city background.
+
+Place a large animated notification bell in the centre.
+
+Animation:
+
+- Bell fades in.
+- Gentle movement.
+- Expanding glow.
+- Notification particles.
+- Heading entrance.
+- Description entrance.
+
+Heading:
+
+STAY CONNECTED
+
+Description:
+
+"Get important updates about your community, complaint progress, public projects, announcements, and upcoming events."
+
+Buttons:
+
+ALLOW NOTIFICATIONS
+
+NOT NOW
+
+Request Android notification permission only after the user selects Allow Notifications.
+
+Implement Android runtime permission handling correctly for supported Android versions.
+
+If permission is denied, continue normally.
+
+Do not repeatedly request permission.
+
+Do not block the application if notifications are unavailable.
+
+--------------------------------------------------
+
+# PART 11 — DASHBOARD LOADING SCREEN
+
+Create an elegant loading screen.
+
+Use:
+
+- Animated city background.
+- Civic Pulse logo.
+- Glowing circular progress ring.
+- Smooth progress animation.
+- Rotating loading messages.
+
+Heading:
+
+PREPARING YOUR CIVIC SPACE
+
+Messages:
+
+- Connecting your community...
+- Preparing local updates...
+- Loading civic initiatives...
+- Organizing your dashboard...
+- Getting everything ready...
+
+Use actual application initialization states.
+
+Do not create fake endless loading.
+
+If initialization fails, show a useful error state and retry button.
+
+When loading completes, navigate to the Home Dashboard.
+
+--------------------------------------------------
+
+# PART 12 — HOME DASHBOARD
+
+Create a complete native Android Home Dashboard.
+
+The page must be vertically scrollable.
+
+It must feel like a premium civic super app, not a copied social media feed.
+
+Use LazyColumn or another suitable Compose layout.
+
+### Header
+
+Display:
+
+- Civic Pulse logo.
+- Personalized greeting.
+- Search icon.
+- Notifications.
+- Profile avatar.
+- Three-line More Options menu.
+
+### Hero banner
+
+Display:
+
+Together for a Better Tomorrow.
+
+Supporting message:
+
+"Discover initiatives, share ideas, and make your neighbourhood better."
+
+Include city artwork and actions:
+
+- Explore Initiatives.
+- Join the Movement.
+
+### Quick Actions
+
+Create cards for:
+
+1. Report Issue.
+2. Find Services.
+3. Join Community.
+4. Events.
+5. Volunteer.
+6. Projects.
+
+### Civic Dashboard
+
+Display:
+
+- Community Engagement.
+- New Complaints.
+- Resolved Complaints.
+- Active Events.
+- Community Participants.
+- Public Project Progress.
+
+Use charts and animated counters when actual data is available.
+
+Label demonstration data clearly.
+
+### Nearby Issues
+
+Categories:
+
+- Roads.
+- Waste Management.
+- Water Supply.
+- Street Lighting.
+- Infrastructure.
+
+Show:
+
+- Map preview.
+- Nearby reports.
+- Category filters.
+- Issue status.
+- View Full Map.
+
+### MLA Leaderboard
+
+Provide:
+
+- Monthly.
+- Yearly.
+- All-Time.
+- Constituency filter.
+- Representative profiles.
+- Documented public activities.
+- Verified project updates.
+- Complaint response records.
+
+Do not invent rankings or political scores.
+
+Separate popularity from documented public activity.
+
+### News and Updates
+
+Categories:
+
+- Local News.
+- Government Announcements.
+- Civic Developments.
+- Infrastructure Updates.
+- Project Updates.
+- Community Events.
+
+Display source and publication date.
+
+Do not fabricate news.
+
+### Be a Part of Change
+
+Display:
+
+- Join Now.
+- Volunteer.
+- Participate in Events.
+- Support Community Projects.
+- Invite Neighbours.
+
+--------------------------------------------------
+
+# PART 13 — ANDROID BOTTOM NAVIGATION
+
+Create a fixed bottom navigation bar.
+
+Items:
+
+- Home.
+- Explore.
+- Create.
+- Notifications.
+- Profile.
+
+Use appropriate icons.
+
+Add subtle selection animations.
+
+The Create action may be visually emphasized.
+
+Navigation must use proper Android Compose navigation.
+
+Preserve sensible back-stack behaviour.
+
+Do not lose unsaved form data when navigating unless the user explicitly discards it.
+
+--------------------------------------------------
+
+# PART 14 — MORE OPTIONS MENU
+
+Create an animated modal drawer or navigation panel.
+
+Use a three-line menu icon.
+
+Menu items:
+
+1. Complaints.
+2. Find Services.
+3. Google Maps.
+4. MLA & Leaders.
+5. Projects & Initiatives.
+6. Communities.
+7. Polls & Surveys.
+8. Volunteering.
+9. Civic Assistant.
+10. Messages.
+11. Themes.
+12. Settings.
+13. Help & Support.
+14. About Civic Pulse.
+15. Privacy & Safety.
+16. Logout.
+
+Use appropriate icons and consistent spacing.
+
+Add smooth open and close transitions.
+
+--------------------------------------------------
+
+# PART 15 — EXPLORE
+
+Create a dedicated Explore screen.
+
+Features:
+
+- Government Services.
+- Civic Projects.
+- Events.
+- Communities.
+- Volunteering.
+- Polls & Surveys.
+- Trending Topics.
+- Public Discussions.
+- Infrastructure.
+- Local Announcements.
+
+Include search and filters.
+
+Use Lazy grids where suitable.
+
+--------------------------------------------------
+
+# PART 16 — COMPLAINT MANAGEMENT
+
+Implement a complete complaint workflow.
+
+Complaint form fields:
+
+- Title.
+- Description.
+- Category.
+- Location.
+- Evidence photographs.
+- Visibility.
+- Submission confirmation.
+
+Categories:
+
+- Roads.
+- Water.
+- Waste Management.
+- Drainage.
+- Street Lighting.
+- Public Infrastructure.
+- Public Facilities.
+- Other.
+
+Assign a unique complaint tracking ID.
+
+Complaint statuses:
+
+1. Submitted.
+2. Under Review.
+3. In Progress.
+4. Resolved.
+5. Rejected.
+
+Provide:
+
+- Complaint timeline.
+- Department assignment.
+- Official response.
+- Follow-up.
+- History.
+- Attachments.
+- Discussion.
+
+Only authorized officials may add responses labelled as official.
+
+--------------------------------------------------
+
+# PART 17 — GOOGLE MAPS
+
+Implement Google Maps SDK for Android when configured.
+
+Display:
+
+- Nearby civic issues.
+- Public projects.
+- Government offices.
+- Community services.
+- Complaint locations.
+- Public infrastructure.
+
+Include:
+
+- Search.
+- Filters.
+- Map markers.
+- Current-location feature after explicit permission.
+- Navigation handoff where appropriate.
+
+Handle missing permissions and API credentials gracefully.
+
+Never expose precise resident locations publicly by default.
+
+--------------------------------------------------
+
+# PART 18 — MLA AND TRANSPARENCY CENTRE
+
+Create detailed public representative profiles.
+
+Include:
+
+- Name.
+- Photograph.
+- Position.
+- Constituency.
+- Verification status.
+- Announcements.
+- Documented projects.
+- Complaint responses.
+- Community updates.
+- Public activity records.
+
+Create a Transparency Centre with:
+
+- Public activity tracker.
+- Complaint response tracker.
+- Project tracker.
+- Documented commitments.
+- Monthly reports.
+- Annual reports.
+- Constituency comparisons.
+- Evidence-based badges.
+
+Every metric must have a clear methodology and supporting sources.
+
+Do not invent official information or assign unsupported political scores.
+
+--------------------------------------------------
+
+# PART 19 — PROJECTS AND INITIATIVES
+
+Create project listing and detail screens.
+
+Each project should support:
+
+- Project name.
+- Description.
+- Category.
+- Location.
+- Responsible department.
+- Timeline.
+- Status.
+- Verified progress updates.
+- Evidence.
+- Related complaints.
+- Discussion.
+
+Clearly distinguish official updates from resident submissions.
+
+--------------------------------------------------
+
+# PART 20 — COMMUNITIES AND MESSAGING
+
+Create neighbourhood and interest communities.
+
+Features:
+
+- Community discovery.
+- Membership.
+- Group announcements.
+- Discussions.
+- Events.
+- Volunteer coordination.
+- Group moderation.
+
+Messaging:
+
+- Direct messages.
+- Group messages.
+- Department channels.
+- Representative channels.
+- Broadcast channels.
+- Complaint-specific discussions.
+
+Clearly identify verified official accounts.
+
+Implement reporting and blocking.
+
+--------------------------------------------------
+
+# PART 21 — ADVANCED COMMENTS
+
+Support:
+
+- Threaded replies.
+- Mentions.
+- Pinned comments.
+- Sorting.
+- Media attachments.
+- Edit and delete.
+- Reporting.
+- Moderation.
+- Official-response labels.
+
+Keep discussions readable and accessible.
+
+--------------------------------------------------
+
+# PART 22 — POLLS AND SURVEYS
+
+Implement:
+
+- Poll creation.
+- Voting.
+- Results.
+- Discussion.
+- Public consultation listings.
+- Survey dashboards.
+- Privacy controls.
+
+Clearly distinguish informal community polls from official consultations.
+
+Do not represent an informal poll as an official government decision.
+
+--------------------------------------------------
+
+# PART 23 — EVENTS AND VOLUNTEERING
+
+Create:
+
+- Community events.
+- Volunteer opportunities.
+- Registration.
+- Skill and interest matching.
+- Participation history.
+- Progress tracking.
+- Community badges.
+
+Badges:
+
+- Good Citizen.
+- Participating.
+- Helpful Contributor.
+- Issue Reporter.
+- Community Volunteer.
+- Informative.
+- Active Neighbour.
+
+Award badges only for genuine recorded activities.
+
+--------------------------------------------------
+
+# PART 24 — RESIDENT PROFILES
+
+Create a complete resident profile screen.
+
+Include:
+
+- Profile image.
+- Name.
+- Location with privacy controls.
+- Biography.
+- Interests.
+- Posts.
+- Points.
+- Badges.
+- Complaints.
+- Projects.
+- Events.
+- Volunteering.
+- Saved posts.
+- Privacy settings.
+
+Users must control public profile visibility.
+
+Never expose sensitive information by default.
+
+--------------------------------------------------
+
+# PART 25 — CIVIC ASSISTANT
+
+Build a dedicated Civic Assistant screen.
+
+Use Gemini through a secure backend.
+
+Capabilities:
+
+- Civic services information.
+- Complaint guidance.
+- Government information.
+- Community participation.
+- Public project information.
+- General Indian constitutional information.
+- General legal information.
+- Civic terminology.
+
+Features:
+
+- Chat interface.
+- Suggested questions.
+- Conversation history.
+- Follow-up suggestions.
+- Source references when available.
+- Clear error states.
+
+Do not expose Gemini API keys.
+
+Do not present general information as professional legal advice.
+
+--------------------------------------------------
+
+# PART 26 — NOTIFICATION CENTRE
+
+Create categories:
+
+- All.
+- Messages.
+- Complaint Updates.
+- Government Announcements.
+- Events.
+- Project Updates.
+- Leaderboard Updates.
+- Important Alerts.
+
+Include:
+
+- Mark read.
+- Mark unread.
+- Grouping.
+- History.
+- Preferences.
+- Priority controls.
+
+Use Android notification channels appropriately.
+
+Support background notification delivery through a suitable configured push service.
+
+--------------------------------------------------
+
+# PART 27 — THEMES
+
+Create ten themes:
+
+1. Blue Ocean.
+2. Dark Premium.
+3. Light Classic.
+4. Purple Royal.
+5. Green Nature.
+6. Sunset Glow.
+7. Royal Gold.
+8. Ocean Breeze.
+9. Neon Tech.
+10. Minimal Zen.
+
+Also support:
+
+- Light.
+- Dark.
+- System.
+- Custom accent colour.
+- Live preview.
+- Apply.
+- Save.
+
+Use Material 3 dynamic colour only as an optional enhancement.
+
+Persist theme settings with DataStore.
+
+--------------------------------------------------
+
+# PART 28 — ADMIN CENTRE
+
+Create an administrative environment.
+
+Modules:
+
+- Platform Overview.
+- Complaint Management.
+- User Management.
+- Content Moderation.
+- Reports.
+- Analytics.
+- Roles and Permissions.
+- Audit History.
+- Appeals.
+- Safety Controls.
+
+Use strict backend authorization.
+
+Do not rely on hiding UI controls as the only permission check.
+
+Record important administrative actions.
+
+--------------------------------------------------
+
+# PART 29 — PRIVACY AND SAFETY
+
+Implement:
+
+- Account security.
+- User reporting.
+- Blocking.
+- Moderation.
+- Verification.
+- Location protection.
+- Consent.
+- Privacy controls.
+- Appeals.
+- Audit history.
+- Secure uploads.
+
+Collect only necessary information.
+
+Provide clear privacy explanations.
+
+Use safe defaults.
+
+--------------------------------------------------
+
+# PART 30 — ADVANCED ANIMATION SPECIFICATION
+
+Animations are a core part of Civic Pulse.
+
+Use native Compose animation APIs.
+
+### Splash
+
+- City fade-in.
+- Logo scale reveal.
+- Glow pulse.
+- Text stagger.
+- Floating particles.
+- Smooth route transition.
+
+### Login
+
+- Background movement.
+- Glass card entrance.
+- Staggered form fields.
+- Focus glow.
+- Button press feedback.
+- Loading indicator.
+
+### Sign-up
+
+- Smooth slide transition.
+- Staggered field reveal.
+- Validation feedback.
+- Password-strength indicator.
+
+### Notification onboarding
+
+- Bell entrance.
+- Gentle motion.
+- Expanding glow.
+- Text reveal.
+
+### Loading
+
+- Progress ring.
+- Progress indicator.
+- Rotating messages.
+- Smooth completion transition.
+
+### Dashboard
+
+- Section reveal.
+- Staggered card entrance.
+- Animated counters.
+- Chart transitions.
+- Bottom navigation selection animation.
+- Menu drawer transition.
+- Floating Civic Assistant button.
+
+### Animation performance
+
+Use animation judiciously.
+
+Avoid unnecessary infinite animations.
+
+Avoid expensive blur effects on low-end devices.
+
+Do not animate large layouts continuously when they are not visible.
+
+Use reduced-motion preferences.
+
+All interactions must remain usable without animation.
+
+--------------------------------------------------
+
+# PART 31 — ANDROID DEVICE COMPATIBILITY
+
+Support a sensible Android version range using a current stable Android SDK.
+
+Use:
+
+- Edge-to-edge layouts.
+- Window insets.
+- Adaptive layouts.
+- Proper keyboard handling.
+- Android back navigation.
+- Permission handling.
+- Adaptive icons.
+- Splash screen APIs.
+- Accessibility semantics.
+
+Support phones and tablets.
+
+The app should adapt to screen size rather than assuming a single device resolution.
+
+--------------------------------------------------
+
+# PART 32 — BACKEND AND DATABASE
+
+Create a separate backend project.
+
+Use:
+
+- Node.js.
+- TypeScript.
+- Express.
+- PostgreSQL.
+- Prisma.
+
+Potential database entities:
+
+- User.
+- UserProfile.
+- Role.
+- Permission.
+- Complaint.
+- ComplaintUpdate.
+- Department.
+- Representative.
+- Constituency.
+- Project.
+- ProjectUpdate.
+- Community.
+- CommunityMembership.
+- Post.
+- Comment.
+- Message.
+- Poll.
+- PollOption.
+- PollVote.
+- Event.
+- VolunteerOpportunity.
+- Notification.
+- Report.
+- ModerationAction.
+- AuditLog.
+- VerificationRecord.
+
+Create:
+
+- API routes.
+- Validation.
+- Authentication middleware.
+- Authorization middleware.
+- Error handling.
+- Database migrations.
+- Seed data clearly labelled as demonstration data.
+
+Do not fabricate government information.
+
+--------------------------------------------------
+
+# PART 33 — API INTEGRATION
+
+Implement clean API interfaces for:
+
+- Authentication.
+- Profiles.
+- Complaints.
+- Departments.
+- Projects.
+- Representatives.
+- Communities.
+- Posts.
+- Comments.
+- Messages.
+- Polls.
+- Events.
+- Notifications.
+- Civic Assistant.
+- Administration.
+
+Use Retrofit and typed request/response models.
+
+Handle network failures.
+
+Use repository interfaces.
+
+Support loading, success, empty, and error states.
+
+--------------------------------------------------
+
+# PART 34 — SECURITY
+
+Implement:
+
+- Secure password hashing on the backend.
+- Secure session handling.
+- Token refresh.
+- Authorization.
+- Rate limiting.
+- Input validation.
+- Safe uploads.
+- API protection.
+- Audit logging.
+- Environment-variable configuration.
+- Secure network communication.
+
+Do not place private API credentials in the Android APK.
+
+Do not commit secrets into source control.
+
+--------------------------------------------------
+
+# PART 35 — TESTING
+
+Create:
+
+- Unit tests.
+- ViewModel tests.
+- Repository tests.
+- Navigation tests.
+- Compose UI tests.
+- Form validation tests.
+- Authentication workflow tests.
+- Permission tests.
+- Backend API tests.
+
+Test the complete user journey:
+
+Splash → Login → Sign Up → Authentication → Notification Permission → Loading → Home.
+
+Also test returning-user navigation.
+
+Test on small and large Android devices.
+
+Fix all build errors before declaring completion.
+
+--------------------------------------------------
+
+# PART 36 — PROJECT STRUCTURE
+
+Create a maintainable project structure similar to:
+
+CivicPulse/
+  android/
+    app/
+      src/main/
+        java/
+          com/civicpulse/
+            MainActivity.kt
+            CivicPulseApp.kt
+            navigation/
+            ui/
+              theme/
+              components/
+              screens/
+                splash/
+                auth/
+                onboarding/
+                home/
+                explore/
+                complaints/
+                maps/
+                representatives/
+                projects/
+                communities/
+                messages/
+                polls/
+                volunteering/
+                notifications/
+                profile/
+                settings/
+                assistant/
+                admin/
+            data/
+              local/
+              remote/
+              repository/
+              model/
+            domain/
+              model/
+              repository/
+              usecase/
+            di/
+            util/
+        res/
+          drawable/
+          mipmap/
+          values/
+    build.gradle.kts
+    settings.gradle.kts
+
+  backend/
+    src/
+      modules/
+      middleware/
+      config/
+      routes/
+      services/
+      utils/
+    prisma/
+      schema.prisma
+    package.json
+    .env.example
+
+  README.md
+  .gitignore
+
+Adapt this structure where necessary.
+
+Do not place the entire application inside one Kotlin file.
+
+--------------------------------------------------
+
+# PART 37 — IMPLEMENTATION WORKFLOW
+
+Follow this sequence.
+
+1. Inspect the available development environment.
+2. Create the native Android project.
+3. Configure Gradle.
+4. Configure Kotlin and Compose.
+5. Create the theme system.
+6. Create reusable animated backgrounds.
+7. Implement splash screen.
+8. Implement authentication screens.
+9. Implement notification onboarding.
+10. Implement dashboard loading.
+11. Implement Home Dashboard.
+12. Implement navigation.
+13. Implement additional screens.
+14. Create backend architecture.
+15. Create database schema.
+16. Implement API integration.
+17. Implement authentication.
+18. Implement civic features.
+19. Implement permissions.
+20. Implement tests.
+21. Build the Android application.
+22. Resolve errors.
+23. Verify the complete user journey.
+24. Document setup and deployment.
+
+Do not skip project configuration.
+
+Do not invent build success.
+
+If the current environment cannot compile Android APKs, still create the complete Android Studio source project and clearly explain how to build it in Android Studio.
+
+--------------------------------------------------
+
+# PART 38 — FINAL ACCEPTANCE CRITERIA
+
+The application is not considered complete merely because the splash screen looks attractive.
+
+The following must be verified:
+
+- Native Android project exists.
+- Gradle configuration is valid.
+- Application launches.
+- Splash animation works.
+- Floating particles work.
+- City background renders correctly.
+- Login screen works.
+- Registration screen validates correctly.
+- Forgot-password flow behaves correctly.
+- Authentication integration is documented.
+- Notification permission works appropriately.
+- Loading state completes.
+- Dashboard displays correctly.
+- Bottom navigation works.
+- More Options menu opens and closes.
+- Themes work.
+- Screen layouts adapt to device sizes.
+- Network failures are handled.
+- Sensitive information is protected.
+- Backend integration is documented.
+- Tests are created.
+- Build errors are fixed.
+
+Clearly classify each feature as:
+
+1. Fully implemented.
+2. Implemented in local demonstration mode.
+3. Awaiting credentials or external integration.
+4. Not yet implemented.
+
+Never claim an integration works if it has not been configured and tested.
+
+--------------------------------------------------
+
+# FINAL PRODUCT VISION
+
+Civic Pulse should feel like a premium digital city inside an Android smartphone.
+
+The opening animation should be memorable.
+
+The interface should be beautiful.
+
+Navigation should be smooth.
+
+The dashboard should be useful.
+
+Complaints should be trackable.
+
+Community participation should be meaningful.
+
+Public information should be transparent.
+
+Privacy and security should be respected.
+
+The application should be maintainable and scalable.
+
+Build a genuine Android application, not a website wrapper, not just a design preview, and not a collection of disconnected screens.
+
+**CIVIC PULSE — YOUR COMMUNITY. YOUR VOICE. YOUR FUTURE.**
+
+Together for a Better Tomorrow.

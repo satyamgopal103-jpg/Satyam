@@ -1,0 +1,6 @@
+{
+  "name": "Civic Pulse",
+  "description": "Civic engagement and community networking platform connecting residents, representatives, and local initiatives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
